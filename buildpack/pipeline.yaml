@@ -4,6 +4,12 @@ metadata:
   name: buildpacks-test-pipeline
 spec:
   params:
+    - name: repo-url
+      type: string
+      description: The git repository URL to clone from.
+    - name: branch-name
+      type: string
+      description: The git branch to clone.
     - name: image
       type: string
       description: image URL to push
