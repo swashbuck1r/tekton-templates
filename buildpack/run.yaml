@@ -11,10 +11,10 @@ spec:
       subPath: source
       persistentVolumeClaim:
         claimName: buildpacks-source-pvc
-    # - name: cache-workspace
-    #   subPath: cache
-    #   persistentVolumeClaim:
-    #     claimName: buildpacks-source-pvc
+    - name: cache-workspace
+      subPath: cache
+      persistentVolumeClaim:
+        claimName: buildpacks-source-pvc
   params:
     - name: repo-url 
       value: "{{REPO_URL}}"
