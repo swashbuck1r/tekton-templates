@@ -7,6 +7,9 @@ spec:
     - name: repo-url
       type: string
       description: The git repository URL to clone from.
+    - name: source-subpath
+      type: string
+      description: This path within the repo you want to build.
     - name: branch-name
       type: string
       description: The git branch to clone.
@@ -46,7 +49,7 @@ spec:
         - name: APP_IMAGE
           value: "$(params.image)"
         - name: SOURCE_SUBPATH
-          value: "apps/java-maven" # This is the path within the samples repo you want to build (OPTIONAL, default: "")
+          value: "$(params.source-subpath)" # This is the path within the repo you want to build (OPTIONAL, default: "")
         - name: BUILDER_IMAGE
           value: paketobuildpacks/builder:base # This is the builder we want the task to use (REQUIRED)
     - name: display-results

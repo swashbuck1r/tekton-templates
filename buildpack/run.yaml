@@ -25,6 +25,8 @@ spec:
   params:
     - name: repo-url 
       value: "{{REPO_URL}}"
+    - name: source-subpath 
+      value: "{{SOURCE_SUBPATH}}"
     - name: branch-name
       value: "{{BRANCH_NAME}}"
     - name: image
